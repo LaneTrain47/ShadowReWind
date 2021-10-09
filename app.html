@@ -65,15 +65,28 @@
 
     <!-- Main section -->
     <main id="content" class="flex-shrink-0">
-
-        <div class="container">
-            <h1>App UI goes here</h1>
-            <form>
-                <input id="message" type="text" placeholder="Enter a Message" required>
-                <button id="btnSubmit" type="button" class="btn btn-dark">Display Message</button>
-            </form>
+        <div class="container col-xxl-8 px-4 py-5 mt-5">
+            <div class="row row-cols-1">
+                <div class="col col-md-6 mb-3">
+                    <h1 class="mb-3">ReWind: A Coding Challenge</h1>
+                    <p>This project reverses a string using a decremented <strong>FOR</strong> loop.</p>
+                </div>
+                <div class="col col-md-6">
+                    <h5 class="mb-3">Enter a string to reverse</h5>
+                    <form class="row gx-3 gy-2">
+                        <div class="col-12">
+                            <input type="text" id="userString" class="form-control mt-3" required
+                                placeholder="Enter 2 or more characters" />
+                        </div>
+                        <div class="col-12">
+                            <button type="button" id="btnSubmit" class="btn btn-danger mt-4 mb-3">Reverse!</button>
+                        </div>
+                    </form>
+                    <hr />
+                    <p id="results"></p>
+                </div>
+            </div>
         </div>
-
     </main>
 
     <!-- Page footer -->
@@ -108,12 +121,15 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
 
+    <!-- SweetAlert CDN -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Custom JavaScript for app -->
     <script src="/js/site.js"></script>
 
     <!-- Script for button click event -->
     <script>
-        document.getElementById("btnSubmit").addEventListener("click", displayMessage);
+        document.getElementById("btnSubmit").addEventListener("click", getString);
     </script>
 
 </body>
